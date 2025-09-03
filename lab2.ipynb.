@@ -3,166 +3,7 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "d49b6433-fd01-4c82-a690-3d4a0a984ccd",
-   "metadata": {
-    "scrolled": true
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>dateRep</th>\n",
-       "      <th>day</th>\n",
-       "      <th>month</th>\n",
-       "      <th>year</th>\n",
-       "      <th>cases</th>\n",
-       "      <th>deaths</th>\n",
-       "      <th>countriesAndTerritories</th>\n",
-       "      <th>geoId</th>\n",
-       "      <th>countryterritoryCode</th>\n",
-       "      <th>popData2019</th>\n",
-       "      <th>continentExp</th>\n",
-       "      <th>Cumulative_number_for_14_days_of_COVID-19_cases_per_100000</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>14/12/2020</td>\n",
-       "      <td>14</td>\n",
-       "      <td>12</td>\n",
-       "      <td>2020</td>\n",
-       "      <td>746</td>\n",
-       "      <td>6</td>\n",
-       "      <td>Afghanistan</td>\n",
-       "      <td>AF</td>\n",
-       "      <td>AFG</td>\n",
-       "      <td>38041757.0</td>\n",
-       "      <td>Asia</td>\n",
-       "      <td>9.013779</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>13/12/2020</td>\n",
-       "      <td>13</td>\n",
-       "      <td>12</td>\n",
-       "      <td>2020</td>\n",
-       "      <td>298</td>\n",
-       "      <td>9</td>\n",
-       "      <td>Afghanistan</td>\n",
-       "      <td>AF</td>\n",
-       "      <td>AFG</td>\n",
-       "      <td>38041757.0</td>\n",
-       "      <td>Asia</td>\n",
-       "      <td>7.052776</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>12/12/2020</td>\n",
-       "      <td>12</td>\n",
-       "      <td>12</td>\n",
-       "      <td>2020</td>\n",
-       "      <td>113</td>\n",
-       "      <td>11</td>\n",
-       "      <td>Afghanistan</td>\n",
-       "      <td>AF</td>\n",
-       "      <td>AFG</td>\n",
-       "      <td>38041757.0</td>\n",
-       "      <td>Asia</td>\n",
-       "      <td>6.868768</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3</th>\n",
-       "      <td>11/12/2020</td>\n",
-       "      <td>11</td>\n",
-       "      <td>12</td>\n",
-       "      <td>2020</td>\n",
-       "      <td>63</td>\n",
-       "      <td>10</td>\n",
-       "      <td>Afghanistan</td>\n",
-       "      <td>AF</td>\n",
-       "      <td>AFG</td>\n",
-       "      <td>38041757.0</td>\n",
-       "      <td>Asia</td>\n",
-       "      <td>7.134266</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>10/12/2020</td>\n",
-       "      <td>10</td>\n",
-       "      <td>12</td>\n",
-       "      <td>2020</td>\n",
-       "      <td>202</td>\n",
-       "      <td>16</td>\n",
-       "      <td>Afghanistan</td>\n",
-       "      <td>AF</td>\n",
-       "      <td>AFG</td>\n",
-       "      <td>38041757.0</td>\n",
-       "      <td>Asia</td>\n",
-       "      <td>6.968658</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "      dateRep  day  month  year  cases  deaths countriesAndTerritories geoId  \\\n",
-       "0  14/12/2020   14     12  2020    746       6             Afghanistan    AF   \n",
-       "1  13/12/2020   13     12  2020    298       9             Afghanistan    AF   \n",
-       "2  12/12/2020   12     12  2020    113      11             Afghanistan    AF   \n",
-       "3  11/12/2020   11     12  2020     63      10             Afghanistan    AF   \n",
-       "4  10/12/2020   10     12  2020    202      16             Afghanistan    AF   \n",
-       "\n",
-       "  countryterritoryCode  popData2019 continentExp  \\\n",
-       "0                  AFG   38041757.0         Asia   \n",
-       "1                  AFG   38041757.0         Asia   \n",
-       "2                  AFG   38041757.0         Asia   \n",
-       "3                  AFG   38041757.0         Asia   \n",
-       "4                  AFG   38041757.0         Asia   \n",
-       "\n",
-       "   Cumulative_number_for_14_days_of_COVID-19_cases_per_100000  \n",
-       "0                                           9.013779           \n",
-       "1                                           7.052776           \n",
-       "2                                           6.868768           \n",
-       "3                                           7.134266           \n",
-       "4                                           6.968658           "
-      ]
-     },
-     "execution_count": 2,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "import pandas as pd\n",
-    "\n",
-    "covid= pd.read_csv(\"s3://nelms340/data-2.csv\")\n",
-    "\n",
-    "covid.head()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 3,
-   "id": "a23db5e9-2b29-4ab6-a9c0-28cc2c9fd26e",
+   "id": "122cd00d-0ca9-488b-8455-698904f6a9cf",
    "metadata": {},
    "outputs": [
     {
@@ -348,21 +189,220 @@
        "4     0.000004       0.009891  "
       ]
      },
-     "execution_count": 3,
+     "execution_count": 2,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "covid= pd.read_csv(\"s3://nelms340/NTAD_Military_Bases_-1644289556481787667.csv\")\n",
+    "import warnings\n",
+    "warnings.simplefilter('ignore')\n",
     "\n",
-    "covid.head()"
+    "import pandas as pd\n",
+    "\n",
+    "df = pd.read_csv('s3://nelms340/NTAD_Military_Bases_-1644289556481787667.csv') # load the data from s3\n",
+    "df.head() #show the top 5 rows"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "fbe94014-e35b-4c9c-81a5-f1e208c283e5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(728, 16)"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df.shape"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "42bfab9d-12f6-43d0-887e-8d5b8fb9988a",
+   "metadata": {},
+   "source": [
+    "## I have 728 Rows 16 coloms "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "fe93b973-2cca-4f2e-a4ef-89982523f1b0",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'pandas.core.frame.DataFrame'>\n",
+      "RangeIndex: 728 entries, 0 to 727\n",
+      "Data columns (total 16 columns):\n",
+      " #   Column                                         Non-Null Count  Dtype  \n",
+      "---  ------                                         --------------  -----  \n",
+      " 0   OBJECTID                                       728 non-null    int64  \n",
+      " 1   Country                                        728 non-null    object \n",
+      " 2   Feature Description                            728 non-null    object \n",
+      " 3   Feature Name                                   728 non-null    object \n",
+      " 4   Controlled Unclassified Information Indicator  728 non-null    object \n",
+      " 5   Is FIRRMA Site                                 728 non-null    object \n",
+      " 6   Is Joint Base                                  728 non-null    object \n",
+      " 7   Media Identifier                               728 non-null    object \n",
+      " 8   Primary Key Identifier                         728 non-null    object \n",
+      " 9   Globally Unique Identifier                     665 non-null    object \n",
+      " 10  Site Name                                      728 non-null    object \n",
+      " 11  Site Operational Status                        728 non-null    object \n",
+      " 12  Site Reporting Component Code                  728 non-null    object \n",
+      " 13  State Name Code                                728 non-null    object \n",
+      " 14  Shape__Area                                    728 non-null    float64\n",
+      " 15  Shape__Length                                  728 non-null    float64\n",
+      "dtypes: float64(2), int64(1), object(13)\n",
+      "memory usage: 91.1+ KB\n"
+     ]
+    }
+   ],
+   "source": [
+    "df.info()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "9ce3c497-12ec-412c-ab20-9d532fd05fc1",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>OBJECTID</th>\n",
+       "      <th>Shape__Area</th>\n",
+       "      <th>Shape__Length</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>count</th>\n",
+       "      <td>728.000000</td>\n",
+       "      <td>7.280000e+02</td>\n",
+       "      <td>728.000000</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>mean</th>\n",
+       "      <td>366.125000</td>\n",
+       "      <td>1.410186e-02</td>\n",
+       "      <td>0.386901</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>std</th>\n",
+       "      <td>211.797442</td>\n",
+       "      <td>8.242635e-02</td>\n",
+       "      <td>0.951561</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>min</th>\n",
+       "      <td>1.000000</td>\n",
+       "      <td>2.937668e-10</td>\n",
+       "      <td>0.000061</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>25%</th>\n",
+       "      <td>182.750000</td>\n",
+       "      <td>4.754900e-05</td>\n",
+       "      <td>0.036802</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>50%</th>\n",
+       "      <td>365.500000</td>\n",
+       "      <td>2.658684e-04</td>\n",
+       "      <td>0.104903</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>75%</th>\n",
+       "      <td>549.250000</td>\n",
+       "      <td>2.200033e-03</td>\n",
+       "      <td>0.312400</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>max</th>\n",
+       "      <td>734.000000</td>\n",
+       "      <td>1.193397e+00</td>\n",
+       "      <td>14.227086</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "         OBJECTID   Shape__Area  Shape__Length\n",
+       "count  728.000000  7.280000e+02     728.000000\n",
+       "mean   366.125000  1.410186e-02       0.386901\n",
+       "std    211.797442  8.242635e-02       0.951561\n",
+       "min      1.000000  2.937668e-10       0.000061\n",
+       "25%    182.750000  4.754900e-05       0.036802\n",
+       "50%    365.500000  2.658684e-04       0.104903\n",
+       "75%    549.250000  2.200033e-03       0.312400\n",
+       "max    734.000000  1.193397e+00      14.227086"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df.describe()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5ae33b5c-3470-40d2-bb00-47aa5791b6cc",
+   "metadata": {},
+   "source": [
+    "## I have a combination of both numerical columns and text Collins consisting of things like joint base operational status and size of the base."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7192d5c5-34d1-494c-be01-f8c5aa077fda",
+   "metadata": {},
+   "source": [
+    "## my first impression of the data is that there are a vast amount of bases contributing to the status"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "9918a9cd-49c0-4fb3-b7cf-d36c78571590",
+   "id": "85e1f55e-a83d-4a4a-9930-838b83fd0493",
    "metadata": {},
    "outputs": [],
    "source": []
@@ -370,9 +410,9 @@
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "conda_python3",
+   "display_name": "conda_pytorch_p310",
    "language": "python",
-   "name": "conda_python3"
+   "name": "conda_pytorch_p310"
   },
   "language_info": {
    "codemirror_mode": {
