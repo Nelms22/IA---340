@@ -11,7 +11,7 @@ this is my IA 340 progect.
 CP the jmu info. 
 
 1. lab 1
-2. lab 2
+2. [lab 2](https://github.com/Nelms22/IA---340/blob/main/ThisisLAB2.ipynb)
 3. lab3
 
 Fun fact:
